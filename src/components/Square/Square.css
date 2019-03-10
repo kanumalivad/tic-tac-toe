@@ -1,0 +1,48 @@
+.square{
+    background: #fff;
+    border: 1px solid black;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    outline: none;
+}
+
+.square:active {
+    outline: none
+}
+
+.btn-0 {
+    border-left: none;
+    border-top: none;
+}
+
+.btn-1 {
+    border-top: none;
+}
+
+.btn-2 {
+    border-top: none;
+    border-right: none;
+}
+
+.btn-3 {
+    border-left: none;
+}
+
+.btn-5 {
+    border-right: none;
+}
+
+.btn-6 {
+    border-left: none;
+    border-bottom: none;
+}
+
+.btn-7 {
+    border-bottom: none;
+}
+
+.btn-8 {
+    border-right: none;
+    border-bottom: none;
+}
