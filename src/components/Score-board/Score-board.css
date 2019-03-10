@@ -1,0 +1,14 @@
+.score-board-wrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.score-item{
+    width: 100px;
+    text-align: center;
+}
+
+.counts{
+    margin-top:10px; 
+}

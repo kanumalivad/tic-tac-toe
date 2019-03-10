@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 import './Board.css';
 import Square from '../Square/Square';
+import { checkWinner, isTie} from '../utils/helper';
+import ScoreBoard from '../Score-board/Score-board';
 
 class Board extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             squares : Array(9).fill(null),
             xIsNext : true,
+            counts : {
+                p1  : 0,
+                p2  : 0,
+                tie : 0,
+            },
         };
     }
 
@@ -20,8 +28,12 @@ class Board extends Component {
         );
     }
 
+    emptyBoard() {
+        this.setState({squares : Array(9).fill(null)});
+    }
+
     handleClick(i) {
-        if(this.state.squares[i] == 'X' || this.state.squares[i] == 'O') {
+        if( this.state.squares[i] === 'X' || this.state.squares[i] === 'O') {
             return;
         } else {
             const squares = this.state.squares.slice();
@@ -35,8 +47,25 @@ class Board extends Component {
     }
 
     render() {
+        const winner = checkWinner(this.state.squares);
+        let counts = this.state.counts;
+        if(winner) {
+            if(winner === 'X') {
+                ++counts.p1;
+            }
+            else if(winner === 'O') {
+                ++counts.p2;
+            }
+            this.emptyBoard();
+            this.setState( {counts : counts} );
+        } else if(isTie(this.state.squares)) {
+            ++counts.tie;
+            this.setState( {counts : counts} );
+            this.emptyBoard();
+        }
+            
         return (
-           <div className='board'>
+            <div className='board'>
                <div className="board-row">
                     {this.renderSquare(0)}
                     {this.renderSquare(1)}
@@ -52,8 +81,11 @@ class Board extends Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                </div>
-           </div>
+
+               <ScoreBoard counts={this.state.counts}/>
+            </div>
         );
+        
     }
 }
 export default Board;
