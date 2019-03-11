@@ -2,52 +2,46 @@
 
 .square{
     background: #fff;
-    border: 1px solid black;
+    border: none;
     height: 70px;
     width: 70px;
     text-align: center;
     outline: none;
-    font-size: 55px;
-    line-height: 55px;
+    font-size: 15px;
+    line-height: 40px;
     font-family: Paprika;
+    margin:1px;
+    transition: background-color 0.2s, font-size 0.1s;
 }
 
 .square:active {
     outline: none
 }
 
-.btn-0 {
-    border-left: none;
-    border-top: none;
+.blue-click{
+     background-color: #2196F3;
+     font-size: 40px;
 }
 
-.btn-1 {
-    border-top: none;
+.blue-click:hover{
+    background-color: #90CAF9;
 }
 
-.btn-2 {
-    border-top: none;
-    border-right: none;
+.orange-click{
+    background-color: #FF8A65;
+    font-size: 40px;
 }
 
-.btn-3 {
-    border-left: none;
+.orange-click:hover{
+    background-color: #FFAB91;
 }
 
-.btn-5 {
-    border-right: none;
+.blue:hover{
+    background-color: #90CAF9;
 }
 
-.btn-6 {
-    border-left: none;
-    border-bottom: none;
+.orange:hover{
+    background-color: #FFAB91;
 }
 
-.btn-7 {
-    border-bottom: none;
-}
 
-.btn-8 {
-    border-right: none;
-    border-bottom: none;
-}

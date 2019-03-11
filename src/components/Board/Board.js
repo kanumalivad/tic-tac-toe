@@ -23,7 +23,8 @@ class Board extends Component {
         return (    
             <Square no = {i}
                     value = {this.state.squares[i]}
-                    clickHandler = { () => this.handleClick(i)} 
+                    clickHandler = { () => this.handleClick(i)}
+                    turn = {this.state.xIsNext ? 'blue' : 'orange'}
             />
         );
     }
