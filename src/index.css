@@ -1,3 +1,10 @@
 body {
     background-color: #CFD8DC;
 }
+
+#root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -66,6 +66,7 @@ class Board extends Component {
         }
             
         return (
+            <React.Fragment>
             <div className='board'>
                <div className="board-row">
                     {this.renderSquare(0)}
@@ -82,9 +83,9 @@ class Board extends Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                </div>
-
-               <ScoreBoard counts={this.state.counts}/>
             </div>
+            <ScoreBoard counts={this.state.counts}/>
+            </React.Fragment>
         );
         
     }

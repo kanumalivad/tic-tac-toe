@@ -1,14 +1,44 @@
 .score-board-wrap{
-    display: flex;
-    justify-content: center;
     margin-top: 30px;
+    display: flex;
+    color :rgb(240, 234, 234);
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 1px 1px 5px 4px rgb(182, 192, 197);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .score-item{
-    width: 100px;
     text-align: center;
+    width: 120px;
 }
 
 .counts{
-    margin-top:10px; 
+    padding-top:25px; 
+    padding-bottom:15px; 
+    background-color: white;
+    color: rgb(51, 51, 51);
+    font-size: 25px;
+    transition: font-size 0.3s;
+}
+
+.p1-header{
+    padding-top:15px; 
+    padding-bottom: 15px;
+    background-color: #F06292;
+    border-top-left-radius: 10px;
+}
+
+.p2-header{
+    padding-top:15px; 
+    padding-bottom: 15px;
+    background-color: #F06292;
+}
+
+.tie-header{
+    padding-top:15px; 
+    padding-bottom: 15px;
+    background-color: #F06292;
+    border-top-right-radius: 10px;
 }
